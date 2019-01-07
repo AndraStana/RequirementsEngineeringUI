@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StudentModule } from './student/student.module';
+import { SharedModule } from './shared/share.module';
+
+import { HttpClientModule } from '@angular/common/http'; 
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { InternshipModule } from './internship/internship.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    HttpClientModule,
+    AngularSvgIconModule,
+
     BrowserModule,
-    AppRoutingModule
+    StudentModule,
+    InternshipModule,
+    SharedModule,
+
+
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

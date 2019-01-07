@@ -1,0 +1,43 @@
+
+<div class="info-container">
+  <div class="profile-image-container">
+    <img *ngIf ="student.gender==0" width="230px" heigth="230px" src="../../../../assets/images/student-boy.jpg">
+    <img *ngIf ="student.gender==1" width="230px" heigth="230px" src="../../../../assets/images/student-girl.jpg">
+  </div>
+
+  <div class="details-container text-font"> 
+    
+      <h1>
+          {{student.firstName}} {{ student.lastName }}
+      </h1>
+      
+      
+      <h3>
+        Age: {{student.age}}
+      </h3>
+
+      <h3>
+        Address: {{student.address}}
+      </h3>
+
+      <h3>
+        {{student.description}}
+      </h3>
+  </div>
+
+  <div>
+    <app-student-cv [showCV]="student.hasCV" [studentId]="student.id"></app-student-cv>
+  </div>
+
+</div>
+
+<div class="internship-info-container text-font">
+  <div class="applied">
+    <app-student-application-history></app-student-application-history>
+  </div>
+
+  <div class="bookmarked">
+    <app-student-bookmarked-internships></app-student-bookmarked-internships>
+  </div>
+
+</div>

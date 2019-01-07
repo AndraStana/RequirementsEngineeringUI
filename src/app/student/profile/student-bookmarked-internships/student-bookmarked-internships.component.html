@@ -1,0 +1,20 @@
+<div class="internships-container color-purple2">
+
+    <!-- <div *ngFor="let internship of bookmarkedInternships"  class="card color-purple1"> -->
+       
+    <mat-card *ngFor="let internship of bookmarkedInternships"  class="card">
+       
+        <h3>
+            {{internship.position}}
+
+        </h3>
+
+        <h3>
+                {{internship.company}}
+    
+            </h3>
+
+    <!-- </div> -->
+    </mat-card>
+
+</div>

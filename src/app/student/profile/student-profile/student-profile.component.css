@@ -1,0 +1,72 @@
+.info-container{
+    display: flex;
+    /* justify-content : space-between */
+
+}
+h1{
+    margin-left: 30%;
+    margin-bottom: 5% ;
+}
+
+.profile-image-container{
+
+}
+.details-container 
+
+    h3 {
+        margin-bottom: 2%;
+        margin-left: 5%;
+     
+    }
+
+
+.internship-info-container{
+    display: flex;
+    justify-content : space-between
+}
+
+
+.applied{
+    flex-grow:2;
+    margin: 2%;
+    overflow-y: scroll;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.bookmarked{
+    flex-grow:2;
+    margin: 2%;
+    overflow-y: scroll;
+    height: 500px;
+    border-radius: 25px;
+}
+
+    /* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  */
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #adafb2;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #adafb2;
+}
+
+/* 
+div {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+  } */

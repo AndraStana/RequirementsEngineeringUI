@@ -1,0 +1,32 @@
+
+
+<mat-card>Simple card</mat-card>
+
+<mat-checkbox></mat-checkbox>
+<mat-divider>
+
+
+<div class="internships-container  color-grey2" >
+
+  <div *ngFor="let internship of filteredInternships" class="card color-purple1">
+    <span>
+      {{internship.position}}
+    </span>
+    <span>
+        {{internship.company}}
+
+    </span>
+    <span>
+        {{internship.description}}
+
+    </span>
+    <span>
+        {{internship.recruitingStartDate }} - {{internship.recruitingEndDate}}  
+
+    </span>
+
+  </div>
+
+
+
+</div>
