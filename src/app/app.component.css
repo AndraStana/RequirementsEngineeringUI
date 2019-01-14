@@ -32,6 +32,12 @@ ul {
 }
 
 
+.icon-container{
+  margin-top:10px;
+  margin-left:95%;
+}
+
+
 /* colooors */
 
 .color-purple1{
@@ -67,4 +73,8 @@ ul {
   text-shadow: -1px 1px white;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
+}
+
+.white-icon svg {
+  fill: white;
 }

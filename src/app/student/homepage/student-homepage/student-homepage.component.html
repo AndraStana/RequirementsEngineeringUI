@@ -1,32 +1,105 @@
 
 
-<mat-card>Simple card</mat-card>
 
-<mat-checkbox></mat-checkbox>
-<mat-divider>
+<div class="wrap">
+  <div class="search">
+     <input type="text" class="searchTerm" [(ngModel)]="searchText" placeholder="What are you looking for?">
+     <button  (click)="filterSearchChanged()" class="searchButton">
+      <mat-icon svgIcon="search"></mat-icon>
+    </button>
+  </div>
+</div>
+<br>
+
+<div class="main-container" style="margin-top: 20px;">
 
 
-<div class="internships-container  color-grey2" >
+  <!-- <div class="details-container text-font"> 
+</div> -->
 
-  <div *ngFor="let internship of filteredInternships" class="card color-purple1">
-    <span>
-      {{internship.position}}
-    </span>
-    <span>
-        {{internship.company}}
 
-    </span>
-    <span>
+
+
+
+
+  <div class="text-font right-panel">
+    <h1>Filters</h1>
+
+
+
+
+
+
+
+
+  <mat-card style="margin-top: 15%" class="color-purple1">
+
+<!-- <form [formGroup]="filterForm"> -->
+
+
+  <mat-form-field>
+      <input matInput name="from" [matDatepicker]="pickerFrom" placeholder="From" (dateChange)="fromDateChanged($event)">
+      <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFrom></mat-datepicker>
+
+  </mat-form-field>   
+
+
+  <mat-form-field>
+      <input matInput name="to" [matDatepicker]="pickerTo" placeholder="To" (dateChange)="toDateChanged($event)">
+      <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+      <mat-datepicker #pickerTo></mat-datepicker>
+
+  </mat-form-field> 
+
+<!-- </form> -->
+
+
+
+
+
+
+
+
+  </mat-card>
+
+</div>
+
+
+
+  <div class="text-font internships-container">
+
+
+    <h1 style="margin-left: 5%">News</h1>
+
+    <mat-card *ngFor="let internship of filteredInternships" class="card color-grey2">
+      <h3>
+        {{internship.position}} 
+        <img width="35px" height="35px" style="margin-left: 3%" src="{{internship.positionPhoto}}" >
+
+      </h3>
+      <mat-divider [inset]="true"></mat-divider>
+      <h3>
+          {{internship.company}}
+        <img width="50px" height="30px" style="margin-left: 3%" src="{{internship.companyPhoto}}">
+      </h3>
+
+      <mat-divider [inset]="true"></mat-divider>
+
+     
+      <h4>
         {{internship.description}}
 
-    </span>
-    <span>
-        {{internship.recruitingStartDate }} - {{internship.recruitingEndDate}}  
+      </h4>
 
-    </span>
+      <mat-divider [inset]="true"></mat-divider>
 
+      <h4>
+        Recruiting period: {{internship.recruitingStartDate | date: "dd/MM/yyyy"}} - {{internship.recruitingEndDate | date: "dd/MM/yyyy"}}
+      </h4>
+
+    </mat-card>
   </div>
-
 
 
 </div>

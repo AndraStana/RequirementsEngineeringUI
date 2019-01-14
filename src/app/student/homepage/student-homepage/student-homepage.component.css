@@ -1,5 +1,6 @@
 .internships-container{
     padding: 1%;
+    flex:3;
     
 }
 
@@ -7,7 +8,68 @@
 .card{
     border-radius: 25px;
     padding: 2%;
-    margin: 3%;
+    margin: 3%; 
+}
+
+.main-container{
+    display: flex;
+}
+
+.right-panel{
+    flex:1;
 }
 
   
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+ body{
+    background: #9984D4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    width: 100%;
+    position: relative
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 3px solid #230C33;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.searchTerm:focus{
+     color: #230C33;
+}
+
+.searchButton {
+    position: absolute;  
+    right: -50px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #230C33;
+    background: #230C33;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wrap{
+    width: 80%;
+    /* position: fixed; */
+    margin-left:70px;
+     /*top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);  */
+} 

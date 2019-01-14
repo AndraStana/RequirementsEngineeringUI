@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+import { FormsModule } from '@angular/forms';
 
 
 import {
@@ -43,6 +46,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
+  
 } from '@angular/material';
 
 @NgModule({
@@ -87,8 +91,12 @@ import {
     MatTooltipModule,
     MatTreeModule,
     BrowserAnimationsModule,
+
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule
+
     
-    NgbModule
   ],
   exports : [
     PageNotFoundComponent,
@@ -128,6 +136,10 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+
+    ReactiveFormsModule,
+    FormsModule
+
   ],
 
   providers: []

@@ -19,4 +19,6 @@ export class newsfeedInternship extends basicInternship{
     description: string;
     recruitingStartDate: Date;
     recruitingEndDate: Date;
+    positionPhoto: string;
+    companyPhoto: string;
 }

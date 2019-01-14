@@ -7,9 +7,6 @@ import { StudentBookmarkedInternshipsComponent } from './profile/student-bookmar
 import { StudentCvComponent } from './profile/student-cv/student-cv.component';
 
 
-// import {MatCardModule} from '@angular/material';
-// import {MatDividerModule} from '@angular/material/divider'
-// import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 import { HttpClientModule } from '@angular/common/http'; 
@@ -32,7 +29,8 @@ import { SharedModule } from '../shared/share.module';
     HttpClientModule,
     AngularSvgIconModule,
     StudentRoutingModule,
-    SharedModule
+    SharedModule,
+
 
   ],
   exports: [
